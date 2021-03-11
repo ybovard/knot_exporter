@@ -219,6 +219,12 @@ if __name__ == '__main__':
         help="disable collection of zone timer settings"
     )
 
+    parser.add_argument(
+        "--no-zone-read",
+        action='store_false',
+        help="disable collection of zone data currently being presented"
+    )
+
     args = parser.parse_args()
 
     REGISTRY.register(KnotCollector(
